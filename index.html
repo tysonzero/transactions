@@ -12,5 +12,10 @@
       <p><input type="button" name="calculate" value="Calculate" onclick="calculate(this.form)"><p>
       <p>Amount you should charge: <input type="text" name="result"></p>
     </form>
+    <script type="text/javascript">
+      function calculate(form) {
+        form.result.value = (Number(form.amount.value) + Number(form.flat.value)) / (1 - Number(form.percentile.value));
+      }
+    </script>
   </body>
 </html>
